@@ -1,4 +1,0 @@
-aba868f add cicd prettier
- .husky/pre-commit          |  2 +-
- src/layouts/BlogPost.astro | 10 +++++-----
- 2 files changed, 6 insertions(+), 6 deletions(-)
