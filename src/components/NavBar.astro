@@ -3,29 +3,29 @@ import HeaderLink from "./HeaderLink.astro";
 ---
 
 <header>
-    <nav>
-        <HeaderLink href="/">Home</HeaderLink>
-        <HeaderLink href="/blog">Blog</HeaderLink>
-        <HeaderLink
-            href="https://www.linkedin.com/in/bjbagher/"
-            target="_blank"
-        >
-            Linkedin
-        </HeaderLink>
-        <HeaderLink href="https://github.com/bjbagher" target="_blank">
-            GitHub
-        </HeaderLink>
-    </nav>
+  <nav>
+    <HeaderLink href="/">Home</HeaderLink>
+    <HeaderLink href="/blog">Blog</HeaderLink>
+    <HeaderLink href="https://www.linkedin.com/in/bjbagher/" target="_blank">
+      Linkedin
+    </HeaderLink>
+    <HeaderLink href="https://github.com/bjbagher" target="_blank">
+      GitHub
+    </HeaderLink>
+  </nav>
 </header>
 
 <style>
-    header {
-        white-space: nowrap;
-        max-width: 30ch;
-        margin: 5vh 0.5rem;
-    }
-    
-    nav {
-        width: fit-content;
-    }
+  header {
+    white-space: nowrap;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5vh auto;
+  }
+
+  nav {
+    width: fit-content;
+  }
 </style>

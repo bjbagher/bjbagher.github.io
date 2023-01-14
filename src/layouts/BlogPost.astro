@@ -3,53 +3,55 @@ import Layout from "./Layout.astro";
 import NavBar from "../components/NavBar.astro";
 
 export interface Props {
-	content: {
-		title: string;
-		pubDate?: string;
-		updatedDate?: string;
-		heroImage?: string;
-	};
+  content: {
+    title: string;
+    pubDate?: string;
+    updatedDate?: string;
+    heroImage?: string;
+  };
 }
 
 const {
-	content: { title, pubDate, updatedDate, heroImage },
+  content: { title, pubDate, updatedDate, heroImage },
 } = Astro.props;
 ---
 
 <Layout title={title}>
-	<NavBar />
-	<main>
-		<article>
-			{
-				heroImage && (
-					<img width={420} height={260} src={heroImage} alt="" />
-				)
-			}
-			<h1 class="title">{title}</h1>
-			{pubDate && <time>{pubDate}</time>}
-			{
-				updatedDate && (
-					<div>
-						Last updated on <time>{updatedDate}</time>
-					</div>
-				)
-			}
-	
-			<hr />
-			<slot  />
-		</article>
-	</main>
+  <NavBar />
+  <main>
+    <article>
+      {heroImage && <img width={420} height={260} src={heroImage} alt="" />}
+      <div class="slot">
+        <h1 class="title">{title}</h1>
+        {pubDate && <time>{pubDate}</time>}
+        {
+          updatedDate && (
+            <div>
+              Last updated on <time>{updatedDate}</time>
+            </div>
+          )
+        }
+        <hr />
+        <slot />
+      </div>
+    </article>
+  </main>
 </Layout>
 
 <style>
-	img {
-		/* font-size: 1rem; */
-		 display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		padding-left: 1rem;
-		margin: auto;
-	}
+  img {
+    /* font-size: 1rem; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 1rem;
+    margin: auto;
+  }
 
+  .slot {
+    width: 50%;
+    margin: auto;
+    min-width: fit-content;
+  }
 </style>

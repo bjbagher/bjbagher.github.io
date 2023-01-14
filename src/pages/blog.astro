@@ -3,69 +3,74 @@ import NavBar from "../components/NavBar.astro";
 import Layout from "../layouts/Layout.astro";
 // Use Astro.glob() to fetch all posts, and then sort them by date.
 const posts = (await Astro.glob("./blog/*.{md,mdx}")).sort(
-	(a, b) =>
-		new Date(b.frontmatter.pubDate).valueOf() -
-		new Date(a.frontmatter.pubDate).valueOf()
+  (a, b) =>
+    new Date(b.frontmatter.pubDate).valueOf() -
+    new Date(a.frontmatter.pubDate).valueOf()
 );
 ---
 
 <Layout title="Blog">
-	<NavBar />
-	<main>
-		<section>
-			<h1>Blog</h1>
-			<ul>
-				{
-					posts.map((post) => (
-						<li>
-							<time datetime={post.frontmatter.pubDate}>
-								{new Date(
-									post.frontmatter.pubDate
-								).toLocaleDateString("en-us", {
-									year: "numeric",
-									month: "short",
-									day: "numeric",
-								})}
-							</time>
-							<a href={post.url}>{post.frontmatter.title}</a>
-						</li>
-					))
-				}
-			</ul>
-		</section>
-	</main>
+  <NavBar />
+  <main>
+    <section>
+      <h1>Blog</h1>
+      <ul>
+        {
+          posts.map((post) => (
+            <li>
+              <time datetime={post.frontmatter.pubDate}>
+                {new Date(post.frontmatter.pubDate).toLocaleDateString(
+                  "en-us",
+                  {
+                    year: "numeric",
+                    month: "short",
+                    day: "numeric",
+                  }
+                )}
+              </time>
+              <a href={post.url}>{post.frontmatter.title}</a>
+            </li>
+          ))
+        }
+      </ul>
+    </section>
+  </main>
 </Layout>
 
 <style>
-	a {
-		max-width: 15ch;
-	}
-	section {
-		margin: auto;
-		font-size: 1.7rem;
-	}
-	h1 {
-		font-size: 2rem;
-	}
-	ul {
-		list-style-type: none;
-		padding: unset;
-	}
-	ul li {
-		display: flex;
-	}
-	ul li time {
-		font-style: italic;
-		white-space: nowrap;
-		color: #595959;
-		padding-right: 3rem;
-	}
-	ul li a:visited {
-		color: #8e32dc;
-	}
-	main {
-		padding: 1.5rem;
-		max-width: 60ch;
-		width: clamp(40ch, 40ch, 60ch);
-	}
+  a {
+    max-width: 15ch;
+  }
+  section {
+    margin: auto;
+    font-size: 1.7rem;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  ul {
+    list-style-type: none;
+    padding: unset;
+  }
+  ul li {
+    display: flex;
+  }
+  ul li time {
+    font-style: italic;
+    white-space: nowrap;
+    color: #595959;
+    padding-right: 3rem;
+  }
+  ul li a:visited {
+    color: #8e32dc;
+  }
+  main {
+    padding: 1.5rem;
+    max-width: 60ch;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5vh auto;
+  }
 </style>
