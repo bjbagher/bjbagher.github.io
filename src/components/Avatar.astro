@@ -1,0 +1,30 @@
+---
+export interface Props {
+    imgSrc: string;
+    altTxt: string;
+}
+
+const { imgSrc, altTxt } = Astro.props
+
+---
+
+<div class="avatar">
+    <img class="avatar__image" src={imgSrc} alt={altTxt} />
+</div>
+
+<style>
+.avatar {
+    /* Center the content */
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.avatar__image {
+    border-radius: 50%;
+    height: 20rem;
+    width:  20rem;
+}
+
+</style>

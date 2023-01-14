@@ -1,0 +1,36 @@
+---
+import HeaderLink from "./HeaderLink.astro";
+---
+
+<header>
+    <nav>
+        <HeaderLink href="/">Home</HeaderLink>
+        <HeaderLink href="/blog">Blog</HeaderLink>
+        <HeaderLink
+            href="https://www.linkedin.com/in/bjbagher/"
+            target="_blank"
+        >
+            Linkedin
+        </HeaderLink>
+        <HeaderLink href="https://github.com/bjbagher" target="_blank">
+            GitHub
+        </HeaderLink>
+    </nav>
+</header>
+
+<style>
+    
+    header {
+        min-width: 450px;
+        max-width: 30ch;
+        margin: auto;
+        margin-top: 15vh;   
+        
+    }
+    nav {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: space-around;
+    }
+</style>
