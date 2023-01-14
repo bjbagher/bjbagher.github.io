@@ -38,7 +38,6 @@ const posts = (await Astro.glob("./blog/*.{md,mdx}")).sort(
 
 <style>
 	a {
-		min-width: ;
 		max-width: 15ch;
 	}
 	section {
@@ -56,10 +55,10 @@ const posts = (await Astro.glob("./blog/*.{md,mdx}")).sort(
 		display: flex;
 	}
 	ul li time {
-		flex: 1 1 130px;
 		font-style: italic;
-		white-space: no-wrap;
+		white-space: nowrap;
 		color: #595959;
+		padding-right: 3rem;
 	}
 	ul li a:visited {
 		color: #8e32dc;
