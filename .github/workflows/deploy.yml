@@ -10,9 +10,7 @@ on:
 
 # Allow this job to clone the repo and create a page deployment
 permissions:
-  packages: write
-  contents: write
-  repository-projects: write
+  deployments: write
 
 jobs:
   run-prettier:
