@@ -21,7 +21,10 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - run: |
-          npx pretty-quick .
+          npx prettier --write $(git show --pretty="format:" --name-only HEAD~1 | sort | uniq)
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add .
           git commit -m "ci/cd prettier"
           git push
   build:
