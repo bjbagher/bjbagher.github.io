@@ -10,10 +10,15 @@ on:
 
 # Allow this job to clone the repo and create a page deployment
 permissions:
-  contents: read
+  packages: write
+  contents: write
+  deployments: write
+  pull-requests: write
+  issues: write
   pages: write
   id-token: write
   deployments: write
+  repository-projects: write
 
 jobs:
   run-prettier:
@@ -21,7 +26,7 @@ jobs:
 
     steps:
       - name: Runs prettier
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v3
       - run: |
           npx prettier --write .
           git config user.name github-actions
