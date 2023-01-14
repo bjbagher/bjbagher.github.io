@@ -10,16 +10,16 @@ on:
 
 # Allow this job to clone the repo and create a page deployment
 permissions:
+  packages: write
   contents: write
-  pages: write
-  id-token: write
-  push: write
+  deployments: write
 
 jobs:
   run-prettier:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Runs prettier
       - uses: actions/checkout@v3
       - run: |
           npx prettier --write .
@@ -28,6 +28,7 @@ jobs:
           git add .
           git commit -m "ci/cd prettier"
           git push
+
   build:
     runs-on: ubuntu-latest
     steps:
