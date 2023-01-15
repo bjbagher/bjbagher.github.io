@@ -29,10 +29,12 @@ jobs:
           repo-token: ${{ secrets.GH_TOKEN }}
           ref: ${{ github.head_ref }}
       - run: |
+          ls
+          echo "hello world" >> text
+          git add .
           git config user.name github-actions
           git config user.email github-actions@github.com
           git status
-          git add $(npx prettier --write .  --list-different)
           git commit -m "ci/cd prettier" 
           git push
 
