@@ -24,14 +24,19 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      
       - name: Runs prettier
         uses: actions/checkout@v3
       - run: |
           npx prettier --write .
+      
+      - name: Commits
+        uses: actions/checkout@v3
+      - run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
           git add .
-          git commit -m "ci/cd prettier"
+          git commit -m "ci/cd prettier" || echo "nothing to commit, proceed"
           git push || echo "nothing to push, proceed"
 
   build:
