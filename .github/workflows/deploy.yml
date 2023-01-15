@@ -27,7 +27,7 @@ jobs:
       - name: Run prettier
         with:
           repo-token: ${{ secrets.GH_TOKEN }}
-      - run: |
+        run: |
           npx prettier --write .
           git config user.name github-actions
           git config user.email github-actions@github.com
