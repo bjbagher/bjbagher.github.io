@@ -11,8 +11,7 @@ heroImage: "/assets/gh_actions.png"
 1. Add the following job to your workflow
 
 ```yaml
-
- jobs:
+jobs:
   run-prettier:
     runs-on: macos-latest
 
@@ -28,21 +27,18 @@ heroImage: "/assets/gh_actions.png"
           git add . 
           git commit -m "Automatic Changes" 
           git push
-
 ```
 
 2. Make sure to have the following permissions
 
 ```yaml
-
-    permissions:
-    packages: write
-    contents: write
-    deployments: write
-    pull-requests: write
-    issues: write
-    pages: write
-    id-token: write
-    repository-projects: write
-
+permissions:
+packages: write
+contents: write
+deployments: write
+pull-requests: write
+issues: write
+pages: write
+id-token: write
+repository-projects: write
 ```
