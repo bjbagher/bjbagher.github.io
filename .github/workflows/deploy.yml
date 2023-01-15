@@ -22,16 +22,16 @@ permissions:
 jobs:
   run-prettier:
     runs-on: ubuntu-latest
-    
+
     steps:
       - uses: actions/checkout@v3
       - run: |
-          npx prettier --write .
+          npx prettier --write src/.
           git config user.name github-actions
           git config user.email github-actions@github.com
           git add .
-          git commit -m "ci/cd prettier"
-          git push
+          git commit -m "ci/cd prettier" || echo "nothing to commit, proceed"
+          git push || echo "nothing to push, proceed"
 
   build:
     runs-on: ubuntu-latest
