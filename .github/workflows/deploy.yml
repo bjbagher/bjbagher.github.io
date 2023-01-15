@@ -29,9 +29,13 @@ jobs:
           ref: ${{ github.head_ref }}
       - name: prettier
         run: npx prettier --write .
+      - name: Sleep for 30 seconds
+        run: sleep 30s
+        shell: bash
       - name: Check for modified files
         id: git-check
         run: |
+          git status
           if git diff-index --quiet HEAD --; then echo "false"; else echo "true"; fi
           echo "modified=$(if git diff-index --quiet HEAD --; then echo "false"; else echo "true"; fi)" >> $GITHUB_OUTPUT
       - name: Push changes
