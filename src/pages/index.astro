@@ -5,78 +5,74 @@ import NavBar from "../components/NavBar.astro";
 ---
 
 <Layout title="Welcome to my website">
-	<NavBar />
-	<main>
-		<section>
-			<Avatar altTxt="astronaut cat" imgSrc="/assets/astro_cat.png" />
-			<h1>
-				Hi, I'm <span class="text-gradient">Bahram</span>{" "}<span
-					class="rotate">👋</span>
-			</h1>
-		</section>
-		<p class="intro">
-			I'm a developer based in Fort Lauderdale, FL. 
-		</p>
-
-	</main>
+  <NavBar />
+  <main>
+    <section>
+      <Avatar altTxt="astronaut cat" imgSrc="/assets/astro_cat.png" />
+      <h1>
+        Hi, I'm <span class="text-gradient">Bahram</span>{" "}<span
+          class="rotate">👋</span
+        >
+      </h1>
+    </section>
+    <p class="intro">I'm a developer based in Fort Lauderdale, FL.</p>
+  </main>
 </Layout>
 
 <style>
-	section{
-		/* margin: 0 auto; */
-	}
-	main {
-		margin: 0 auto;
-		max-width: 39ch;
-	}
+  section {
+    /* margin: 0 auto; */
+  }
+  main {
+    margin: 0 auto;
+    max-width: 39ch;
+  }
 
-	h1 {
-		letter-spacing: 0.1rem;
-		font-size: 2.5rem;
-		font-weight: normal;
-		overflow: hidden; /* Ensures the content is not revealed until the animation */
-		border-right: 0.05em solid grey;
-		white-space: nowrap; /* Keeps the content on a single line */
-		margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-		animation: typing 3.5s steps(40, end),
-			blink-caret 0.75s step-end infinite;
-		color: #282a36;
-	}
+  h1 {
+    letter-spacing: 0.1rem;
+    font-size: 2.5rem;
+    font-weight: normal;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: 0.05em solid grey;
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+    color: #282a36;
+  }
 
-	@keyframes typing {
-		from {
-			width: 0;
-		}
-		to {
-			width: 100%;
-		}
-	}
-	@keyframes blink-caret {
-		from,
-		to {
-			border-color: transparent;
-		}
-		50% {
-			border-color: black;
-		}
-	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		/* background-clip:content-box; */
-		color: transparent;
-		background-size: 400%;
-		/* background-position: 0%; */
-	}
-		.intro {
-			line-height: 1.4;
-			margin: 1rem 0;
-			border: 1px solid rgba(var(--accent), 25%);
-			background-color: white;
-			padding: 0.8rem;
-			border-radius: 0.4rem;
-			letter-spacing: 0.04rem;
-		}
-
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  @keyframes blink-caret {
+    from,
+    to {
+      border-color: transparent;
+    }
+    50% {
+      border-color: black;
+    }
+  }
+  .text-gradient {
+    background-image: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* background-clip:content-box; */
+    color: transparent;
+    background-size: 400%;
+    /* background-position: 0%; */
+  }
+  .intro {
+    line-height: 1.4;
+    margin: 1rem 0;
+    border: 1px solid rgba(var(--accent), 25%);
+    background-color: white;
+    padding: 0.8rem;
+    border-radius: 0.4rem;
+    letter-spacing: 0.04rem;
+  }
 </style>
