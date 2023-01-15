@@ -17,7 +17,6 @@ permissions:
   issues: write
   pages: write
   id-token: write
-  deployments: write
   repository-projects: write
 
 jobs:
