@@ -25,6 +25,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
+        with: 
+            fetch-depth: 4
       - run: |
           npx prettier --write .
           git config user.name github-actions
