@@ -28,7 +28,7 @@ jobs:
     - uses: actionsx/prettier@v2
       with:
         # prettier CLI arguments.
-        args: --write src/**/*.*
+        args: --write src/.
 
     - name: Push changes
       run: |
