@@ -26,14 +26,14 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         with:
-          repo-token: ${{ secrets.GH_TOKEN }}
+          token: ${{ secrets.GH_TOKEN }}
           ref: ${{ github.head_ref }}
       - run: |
-          npx prettier --write .
+          npm run format
           git config user.name github-actions
           git config user.email github-actions@github.com
           git add .
-          git commit -m "ci/cd prettier" 
+          git commit -m "Automatic Changes" 
           git push
 
   build:
