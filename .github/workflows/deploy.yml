@@ -24,27 +24,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Get changed files
-        id: changed-files
-        uses: tj-actions/changed-files@v35
-
-      - name: List all changed files
-        run: |
-          for file in ${{ steps.changed-files.outputs.all_changed_files }}; do
-            echo "$file was changed"
-          done
-      - uses: actions/checkout@v2
-        with:
-          ref: ${{ github.head_ref }}
-          repo-token: ${{ secrets.GH_TOKEN }}
-
-      - name: Run prettier     
+      - name: Run prettier
         run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
           git status
-          git add $(npx prettier --write .)
-          git commit -m "ci/cd prettier"
+          git add $(npx prettier --write .  --list-different)
+          git commit -m "ci/cd prettier" 
           git push
 
   build:
