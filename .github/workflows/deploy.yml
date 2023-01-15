@@ -15,8 +15,6 @@ permissions:
   deployments: write
   pull-requests: write
   issues: write
-  pages: write
-  id-token: write
   repository-projects: write
 
 jobs:
@@ -27,7 +25,6 @@ jobs:
       - uses: actions/checkout@v3
         with:
           repo-token: ${{ secrets.GH_TOKEN }}
-          ref: ${{ github.head_ref }}
       - run: |
           npx prettier --write .
           git config user.name github-actions
