@@ -28,7 +28,7 @@ jobs:
         with: 
             fetch-depth: 4
       - run: |
-          npx prettier --write .
+          npx prettier --write src/.
           git config user.name github-actions
           git config user.email github-actions@github.com
           git add .
