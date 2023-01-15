@@ -55,6 +55,8 @@ const posts = (await Astro.glob("./blog/*.{md,mdx}")).sort(
   }
   ul li {
     display: flex;
+    border-top: 3px solid #bbb;
+    padding: 1em 0;
   }
   ul li time {
     font-style: italic;
