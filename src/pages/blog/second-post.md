@@ -25,8 +25,8 @@ jobs:
           git config user.name github-actions
           git config user.email github-actions@github.com
           git add . 
-          git commit -m "Automatic Changes" 
-          git push
+          git commit -m "Automatic Changes"  || echo "no changes"
+          git push || echo "no changes"
 ```
 
 2. Make sure to have the following permissions
@@ -42,3 +42,5 @@ pages: write
 id-token: write
 repository-projects: write
 ```
+
+***Checkout the [source code](https://github.com/bjbagher/bjbagher.github.io) of this website for a more detailed example.***
