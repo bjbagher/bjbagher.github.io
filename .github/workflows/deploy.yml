@@ -26,12 +26,12 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - run: |
-          npx prettier --write src/.
+          npx prettier --write .
           git config user.name github-actions
           git config user.email github-actions@github.com
           git add .
           git commit -m "ci/cd prettier"
-          git push 
+          git push
 
   build:
     runs-on: ubuntu-latest
