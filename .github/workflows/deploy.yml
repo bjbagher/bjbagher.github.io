@@ -24,15 +24,18 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - name: Run Prettier
       - run: |
           npx prettier --write .
-          git config user.name github-actions
-          git config user.email github-actions@github.com
-          git show --pretty="format:" --name-only HEAD~1 | sort | uniq
-          git add .
-          git commit -m "ci/cd prettier" || echo "nothing to commit, proceed"
-          git push || echo "nothing to push, proceed"
+
+      - name: Commit files
+        uses: actions/checkout@v3
+      - run: |
+            git config user.name github-actions
+            git config user.email github-actions@github.com
+            git add -A
+            git commit -m "ci/cd prettier" || echo "nothing to commit, proceed"
+            git push || echo "nothing to push, proceed"
 
   build:
     runs-on: ubuntu-latest
