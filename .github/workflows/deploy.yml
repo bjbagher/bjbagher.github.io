@@ -22,19 +22,15 @@ permissions:
 jobs:
   run-prettier:
     runs-on: ubuntu-latest
-
+    
     steps:
-    - uses: actions/checkout@v2 # Check out the repository first.
-    - uses: actionsx/prettier@v2
-      with:
-        # prettier CLI arguments.
-        args: --write src/.
-
-    - name: Push changes
-      run: |
+      - uses: actions/checkout@v3
+      - run: |
+          npx prettier --write .
           git config user.name github-actions
           git config user.email github-actions@github.com
-          git commit -am "Automated changes"
+          git add .
+          git commit -m "ci/cd prettier"
           git push
 
   build:
