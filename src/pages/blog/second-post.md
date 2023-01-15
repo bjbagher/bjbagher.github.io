@@ -43,4 +43,4 @@ id-token: write
 repository-projects: write
 ```
 
-***Checkout the [source code](https://github.com/bjbagher/bjbagher.github.io) of this website for a more detailed example.***
+**_Checkout the [source code](https://github.com/bjbagher/bjbagher.github.io) of this website for a more detailed example._**
