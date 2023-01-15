@@ -15,6 +15,8 @@ permissions:
   deployments: write
   pull-requests: write
   issues: write
+  pages: write
+  id-token: write
   repository-projects: write
 
 jobs:
@@ -22,8 +24,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Runs prettier
-        uses: actions/checkout@v3
+      - name: Run prettier
         with:
           repo-token: ${{ secrets.GH_TOKEN }}
       - run: |
