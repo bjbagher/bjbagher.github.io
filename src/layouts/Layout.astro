@@ -13,7 +13,7 @@ const { title } = Astro.props;
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-    <meta name="description" content="BB personal website">
+    <meta name="description" content="BB personal website" />
 
     <title>{title}</title>
   </head>
@@ -22,7 +22,6 @@ const { title } = Astro.props;
   </body>
 </html>
 <style is:global>
-
   :root {
     --accent: 124, 58, 237;
     --accent-gradient: linear-gradient(
@@ -34,12 +33,13 @@ const { title } = Astro.props;
   }
 
   @font-face {
-  font-family: 'SF PRO';
-  font-style: normal;
-  font-weight: 400;
-  src: system-ui, url("https://fonts.cdnfonts.com/css/sf-pro-display") format('woff');
-  font-display: swap;
-}
+    font-family: "SF PRO";
+    font-style: normal;
+    font-weight: 400;
+    src: system-ui,
+      url("https://fonts.cdnfonts.com/css/sf-pro-display") format("woff");
+    font-display: swap;
+  }
 
   html {
     font-family: "SF PRO", system-ui, sans-serif;
