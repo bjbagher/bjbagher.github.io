@@ -3,7 +3,7 @@ layout: "../../layouts/BlogPost.astro"
 title: "Run Prettier on Github Actions"
 description: "Run Prettier on Github Actions"
 pubDate: "Jan 12 2023"
-heroImage: "/assets/gh_actions.png"
+heroImage: "/assets/gh_actions.webp"
 ---
 
 ## How to run

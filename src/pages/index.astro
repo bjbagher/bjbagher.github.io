@@ -2,13 +2,14 @@
 import Layout from "../layouts/Layout.astro";
 import Avatar from "../components/Avatar.astro";
 import NavBar from "../components/NavBar.astro";
+
 ---
 
 <Layout title="Welcome to my website">
   <NavBar />
   <main>
     <section>
-      <Avatar altTxt="astronaut cat" imgSrc="/assets/astro_cat.png" />
+      <Avatar altTxt="astronaut cat" imgSrc="/assets/astro_cat.webp" />
       <h1>
         Hi, I'm <span class="text-gradient">Bahram</span>{" "}<span
           class="rotate">👋</span
@@ -19,7 +20,11 @@ import NavBar from "../components/NavBar.astro";
   </main>
 </Layout>
 
+
 <style>
+  p {
+    max-width: fit-content;
+  }
   section {
     /* margin: 0 auto; */
   }
@@ -73,6 +78,5 @@ import NavBar from "../components/NavBar.astro";
     background-color: white;
     padding: 0.8rem;
     border-radius: 0.4rem;
-    letter-spacing: 0.04rem;
   }
 </style>

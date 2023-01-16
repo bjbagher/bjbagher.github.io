@@ -12,7 +12,8 @@
     "format": "prettier -w ."
   },
   "dependencies": {
-    "astro": "^1.9.0"
+    "astro": "^1.9.0",
+    "astro-compress": "^1.1.27"
   },
   "devDependencies": {
     "prettier": "^2.8.3",

@@ -3,7 +3,7 @@ layout: "../../layouts/BlogPost.astro"
 title: "error: getaddrinfo ENOTFOUND localhost"
 description: "Lorem ipsum dolor sit amet"
 pubDate: "Jan 08 2023"
-heroImage: "/assets/astro-image.jpg"
+heroImage: "/assets/astro-image.webp"
 ---
 
 ## Why is it happening
