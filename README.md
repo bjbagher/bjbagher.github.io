@@ -1,6 +1,8 @@
 # Welcome to [my website](https://bjbagher.github.io/)
 
-> 🧑‍🚀 **Seasoned astronaut**
+> 🧑‍🚀 **Lighthouse score**
+
+![](./lighthouse_score.gif)
 
 ## 🧞 Commands
 
