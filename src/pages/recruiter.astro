@@ -1,0 +1,83 @@
+---
+import NavBar from "../components/NavBar.astro";
+import Layout from "../layouts/Layout.astro";
+
+---
+
+<Layout title="Recruiter">
+    <NavBar />
+    <main>
+      <section>
+        <h1>FAQ</h1>
+        <ul>
+            <li class="faq"><button onclick="const toggle=()=>{let dis = document.getElementsByClassName('faq1 show')[0]; if (dis.style.display != 'block') dis.style.display = 'block'; else dis.style.display = 'none'};toggle()">≻ Can you work in the US without sponsorship?</button></li>
+            <li class="faq1 show">• Yes</li>
+            <li class="faq"><button onclick="const toggle=()=>{let dis = document.getElementsByClassName('faq2 show')[0]; if (dis.style.display != 'block') dis.style.display = 'block'; else dis.style.display = 'none'};toggle()"> ≻ Where are you located?</button></li>
+            <li class="faq2 show">• Fort Lauderdale, FL</li>
+            <div class="calendly-inline-widget" style="min-width:320px;height:580px;" data-auto-load="false">
+                <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script>
+                <div class="calendly">
+                <script>Calendly.initInlineWidget({url: 'https://calendly.com/bjbagher'})</script>
+                </div>
+            </div>
+        </ul>
+      </section>
+    </main>
+  </Layout>
+
+ 
+ <style>
+    ul {
+        margin: 0;
+        padding: 0;
+    }
+    li button {
+        border: none;
+        height: inherit;
+        font-size: 0.9rem;
+        width: fit-content;
+        /* white-space: nowrap; */
+        display: flex;
+        flex-wrap: nowrap;
+    }
+    .faq1.show {
+        display: none;
+        margin-left: 1rem;
+    }
+    .faq2.show {
+        display: none;
+        margin-left: 1rem;
+    }
+    
+    .faq{
+        cursor: pointer;
+        border-top: 3px solid #bbb;
+    }
+    .calendly {
+        margin-top: 2rem;
+    }
+    h1 {
+        padding: 0 1rem;
+    }
+    
+    button {
+        height: 5ch;
+        width: 10ch;
+    }
+    
+    ul li {
+    display: flex;
+    padding: 1em 0;
+}
+
+main {
+    min-width: 375px;
+    max-width: 60ch;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5vh auto;
+    padding: 0 1rem;
+}
+</style>
