@@ -39,13 +39,12 @@ const posts = (await Astro.glob("./blog/*.{md,mdx}")).sort(
 </Layout>
 
 <style>
-  h1 {
+  section h1 {
     margin-bottom: 3rem;
   }
   main {
     width: 100%;
   }
-
   li {
     display: grid;
     grid-template-columns: 1fr 1fr;
