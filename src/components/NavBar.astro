@@ -12,7 +12,10 @@ import HeaderLink from "./HeaderLink.astro";
         <HeaderLink href="/blog">Blog</HeaderLink>
       </li>
       <li>
-        <HeaderLink href="https://www.linkedin.com/in/bjbagher/" target="_blank">
+        <HeaderLink
+          href="https://www.linkedin.com/in/bjbagher/"
+          target="_blank"
+        >
           Linkedin
         </HeaderLink>
       </li>
@@ -21,18 +24,17 @@ import HeaderLink from "./HeaderLink.astro";
           GitHub
         </HeaderLink>
       </li>
-  </ul>
+    </ul>
   </nav>
 </header>
 
 <style>
-
   header {
     font-size: 1.5rem;
     width: inherit;
     margin-bottom: 2rem;
   }
-  
+
   ul {
     display: flex;
     justify-content: space-between;

@@ -19,8 +19,16 @@ const {
   <main>
     <article>
       <section>
-        {heroImage && <img src={heroImage}  sizes="(max-width: 600px) 480px,
-800px" alt="" />}
+        {
+          heroImage && (
+            <img
+              src={heroImage}
+              sizes="(max-width: 600px) 480px,
+800px"
+              alt=""
+            />
+          )
+        }
       </section>
       <div class="slot">
         <h1 class="title">{title}</h1>
@@ -40,8 +48,7 @@ const {
 </Layout>
 
 <style>
-
-  section{
+  section {
     display: flex;
     justify-content: center;
     margin: 0 auto;
