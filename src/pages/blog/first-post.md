@@ -1,7 +1,7 @@
 ---
 layout: "../../layouts/BlogPost.astro"
-title: "error: getaddrinfo ENOTFOUND localhost"
-description: "Lorem ipsum dolor sit amet"
+title: "Error: getaddrinfo ENOTFOUND localhost"
+description: "How to solve getaddrinfo not found"
 pubDate: "Jan 08 2023"
 heroImage: "/assets/astro-image.webp"
 ---

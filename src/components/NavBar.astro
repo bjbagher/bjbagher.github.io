@@ -4,30 +4,37 @@ import HeaderLink from "./HeaderLink.astro";
 
 <header>
   <nav>
-    <HeaderLink href="/">Home</HeaderLink>
-    <HeaderLink href="/blog">Blog</HeaderLink>
-    <HeaderLink href="https://www.linkedin.com/in/bjbagher/" target="_blank">
-      Linkedin
-    </HeaderLink>
-    <HeaderLink href="https://github.com/bjbagher" target="_blank">
-      GitHub
-    </HeaderLink>
+    <ul>
+      <li>
+        <HeaderLink href="/">Home</HeaderLink>
+      </li>
+      <li>
+        <HeaderLink href="/blog">Blog</HeaderLink>
+      </li>
+      <li>
+        <HeaderLink href="https://www.linkedin.com/in/bjbagher/" target="_blank">
+          Linkedin
+        </HeaderLink>
+      </li>
+      <li>
+        <HeaderLink href="https://github.com/bjbagher" target="_blank">
+          GitHub
+        </HeaderLink>
+      </li>
+  </ul>
   </nav>
 </header>
 
 <style>
-  header {
-    white-space: nowrap;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 5vh auto;
-  }
 
-  nav {
-    width: fit-content;
-    padding: 0 1rem;
-    margin: auto;
+  header {
+    font-size: 1.5rem;
+    width: inherit;
+    margin-bottom: 2rem;
+  }
+  
+  ul {
+    display: flex;
+    justify-content: space-between;
   }
 </style>

@@ -5,7 +5,6 @@ import NavBar from "../components/NavBar.astro";
 ---
 
 <Layout title="Welcome to my website">
-  <NavBar />
   <main>
     <section>
       <Avatar altTxt="astronaut cat" imgSrc="/assets/astro_cat.webp" />
@@ -26,43 +25,32 @@ import NavBar from "../components/NavBar.astro";
 </Layout>
 
 <style>
-  p {
-    max-width: fit-content;
+
+.intro {
+    line-height: 1.4;
+    margin: 1rem 0;
+    border: 1px solid rgba(var(--accent), 25%);
+    background-color: white;
+    padding: 0.8rem;
+    border-radius: 0.4rem;
   }
 
-  a {
-    font-weight: bold;
-    cursor: pointer;
-    color: blueviolet;
-  }
-
-  .recruiter {
-    width: fit-content;
-    margin-left: 1em;
-    font-size: 0.9rem;
-    color: red;
-  }
-  section {
-    /* margin: 0 auto; */
-  }
-  main {
-    margin: 0 auto;
-    max-width: 39ch;
-  }
-
-  h1 {
+h1 {
     letter-spacing: 0.1rem;
-    font-size: 2.5rem;
     font-weight: normal;
     overflow: hidden; /* Ensures the content is not revealed until the animation */
     border-right: 0.05em solid grey;
     white-space: nowrap; /* Keeps the content on a single line */
     margin: 0 auto; /* Gives that scrolling effect as the typing happens */
     animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
-    color: #282a36;
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-size: 2rem;
   }
 
-  @keyframes typing {
+
+@keyframes typing {
     from {
       width: 0;
     }
@@ -70,6 +58,7 @@ import NavBar from "../components/NavBar.astro";
       width: 100%;
     }
   }
+
   @keyframes blink-caret {
     from,
     to {
@@ -79,21 +68,19 @@ import NavBar from "../components/NavBar.astro";
       border-color: black;
     }
   }
+
   .text-gradient {
     background-image: var(--accent-gradient);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    /* background-clip:content-box; */
     color: transparent;
     background-size: 400%;
-    /* background-position: 0%; */
   }
-  .intro {
-    line-height: 1.4;
-    margin: 1rem 0;
-    border: 1px solid rgba(var(--accent), 25%);
-    background-color: white;
-    padding: 0.8rem;
-    border-radius: 0.4rem;
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
+
+
 </style>
